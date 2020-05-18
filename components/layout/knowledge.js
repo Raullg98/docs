@@ -59,7 +59,7 @@ class withStandard extends React.Component {
 
         <div style={{ marginTop: 36 }} />
 
-        <Wrapper width="1000">
+        <Wrapper width="1000" className="subheader">
           <SubHeader title="Knowledge">
             <Link href="/knowledge">View All Articles</Link>
           </SubHeader>

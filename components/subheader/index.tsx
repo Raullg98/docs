@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import styles from './subheader.module.css'
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
 
 const StickyHeader: React.FC<Props> = ({title, children}) => {
   return (
-    <div className={styles.header}>
+    <div className={cn("subheader", styles.header)}>
       <p className={styles.title}>{title}</p>
 
       <div className={styles.actions}>
