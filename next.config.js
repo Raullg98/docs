@@ -21,6 +21,10 @@ const docsRedirects = [
   [
     'v2/git-integrations/zeit-now-for-gitlab',
     'v2/git-integrations/vercel-for-gitlab'
+  ],
+  [
+    'error/application/NO_STATUS_CODE_FROM_FUNCTION',
+    'error/application/NO_RESPONSE_FROM_FUNCTION'
   ]
 ].map(([before, after]) => ({
   source: `/docs/${before}{/}?`,
@@ -129,6 +133,10 @@ const guidesRedirects = [
   [
     'vue-js-html-forms-with-formcarry-zeit-now',
     'vue-js-html-forms-with-formcarry-vercel'
+  ],
+  [
+    'prevent-uploading-sourcepaths-with-nowignore',
+    'prevent-uploading-sourcepaths-with-vercelignore'
   ]
 ].map(([before, after]) => ({
   source: `/guides/${before}{/}?`,
@@ -435,6 +443,11 @@ module.exports = withMDX({
           source: '/docs/v2/serverless-functions/env-and-secrets',
           permanent: true,
           destination: '/docs/v2/build-step#environment-variables'
+        },
+        {
+          source: '/docs/now-cli/:path*',
+          permanent: true,
+          destination: '/docs/cli/:path*'
         }
       ]
     }
